@@ -16,11 +16,11 @@ namespace Coins.Models
     {
       if ( (ChangeValue / .25) >= 1 )
       {
-        return "you are getting quarters back";
+        return $"you are getting {Convert.ToInt32(ChangeValue / .25)} quarters back";
       }
       else if ( (ChangeValue / .10) >= 1 )
       {
-        return "you are getting dimes back";
+        return $"you are getting {Convert.ToInt32(ChangeValue / .10)} dimes back";
       }
       else if ( (ChangeValue / .05) >= 1 )
       {

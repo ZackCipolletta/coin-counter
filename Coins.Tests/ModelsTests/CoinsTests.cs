@@ -45,7 +45,6 @@ namespace Coins.Tests
       // Act
       string returnCoins = nickelsToReturn.GetMoney();
       double numberOfNickels = Convert.ToInt32(nickelsToReturn.ChangeValue / .05);
-      // int intNickels = Convert.ToInt32(numberOfNickels);
       // Assert
       Assert.AreEqual($"you are getting {numberOfNickels} nickels back", returnCoins);
     }
@@ -54,22 +53,24 @@ namespace Coins.Tests
     public void GetMoney_DetermineTheNumberOfDimesToReturn_String()
     {
       // Arrange
-      Change DimesToReturn = new Change(.12);
+      Change dimesToReturn = new Change(.22);
       // Act
-      string returnCoins = DimesToReturn.GetMoney();
+      string returnCoins = dimesToReturn.GetMoney();
+      double numberOfDimes = Convert.ToInt32(dimesToReturn.ChangeValue / .10);
       // Assert
-      Assert.AreEqual("you are getting dimes back", returnCoins);
+      Assert.AreEqual($"you are getting {numberOfDimes} dimes back", returnCoins);
     }
 
             [TestMethod]
     public void GetMoney_DetermineTheNumberOfQuartersToReturn_String()
     {
       // Arrange
-      Change QuartersToReturn = new Change(.27);
+      Change quartersToReturn = new Change(.27);
       // Act
-      string returnCoins = QuartersToReturn.GetMoney();
+      string returnCoins = quartersToReturn.GetMoney();
+      double numberOfQuarters = Convert.ToInt32(quartersToReturn.ChangeValue / .25);
       // Assert
-      Assert.AreEqual("you are getting quarters back", returnCoins);
+      Assert.AreEqual($"you are getting {numberOfQuarters} quarters back", returnCoins);
     }
 
 
