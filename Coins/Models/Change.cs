@@ -1,13 +1,13 @@
-using System.Collections.Generic;
-using Coins.Models;
 
 namespace Coins.Models
 {
-  // class Program
-  // {
-  //   static void Main()
-  //   {
+  public class Change
+  {
+    public double ChangeValue { get; set; }
 
-  //   }
-  // }
+    public Change (double userChange) 
+    {
+      ChangeValue = userChange;
+    }
+  }
 }

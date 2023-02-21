@@ -1,23 +1,29 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Coins;
-using System;
+using Coins.Models;
 
 namespace Coins.Tests
 {
   [TestClass]
   public class CoinsTests
   {
+
     [TestMethod]
   public void ChangeConstructor_CreatesInstanceOfChange_Change()
-  {
-      // Change newChange = new Change();
+    {
+      Change newChange = new Change(.07);
     }
-
-    // public void EllipseConstructor_CreatesInstanceOfEllipse_Ellilpse()
-    // {
-    // 	Ellipse newEllipse = new Ellipse(2, 3);
-    // }
+    [TestMethod]
+    public void GetChangeValue_ReturnChangeValue_Float()//.....code
+    {
+      //Arrange
+      double userChange = 0.01;
+      Change newChange = new Change(userChange);
+      //Act
+      double result = newChange.ChangeValue;
+      //Assert
+      Assert.AreEqual(userChange, result);
+    }
   }
 }
 
-//0.1 - 0.99 cents
+//0.01 - 0.99 cents
