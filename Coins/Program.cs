@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Coins
 {
-  class Program
+    class Program
   {
     static void Main()
     {
