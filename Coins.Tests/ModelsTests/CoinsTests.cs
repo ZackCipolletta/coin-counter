@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Coins.Models;
 using System;
+
 namespace Coins.Tests
 {
   [TestClass]
